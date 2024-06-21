@@ -12,7 +12,10 @@ class Solution:
                     string = stack.pop() + string
                 stack.pop()
 
-                n = stack.pop()
+                n = ""
+
+                while stack and stack[-1].isdigit():
+                    n = stack.pop() + n
 
                 for count in range(0, int(n)):
                     stack.append(string)
@@ -21,4 +24,4 @@ class Solution:
         return "".join(stack)
                     
 
-                
+                                
