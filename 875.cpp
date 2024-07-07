@@ -1,7 +1,7 @@
 class Solution {
 public:
     bool canEat(vector<int>& piles, int speed, int h) {
-        int hours = 0;
+        long int hours = 0;
 
         for (int p: piles) {
             hours += p / speed;
@@ -14,7 +14,7 @@ public:
 
     int minEatingSpeed(vector<int>& piles, int h) {
         int left = 1;
-        int right = *max_element(piles.begin(),piles.end());
+        long int right = *max_element(piles.begin(),piles.end());
         int ans;
 
         while (left <= right) {
